@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --brand-primary: #273480;
@@ -58,14 +60,16 @@
             background: var(--white);
             border-radius: 12px;
             padding: 2rem;
-            box-shadow: 0 4px 20px rgba(39, 52, 128, 0.08); /* Sutil sombra con tinte del primario */
+            box-shadow: 0 4px 20px rgba(39, 52, 128, 0.08);
+            /* Sutil sombra con tinte del primario */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none;
             color: inherit;
             display: flex;
             flex-direction: column;
             align-items: center;
-            border: 1px solid rgba(197, 203, 230, 0.3); /* brand-100 con opacidad */
+            border: 1px solid rgba(197, 203, 230, 0.3);
+            /* brand-100 con opacidad */
         }
 
         .card:hover {
@@ -111,14 +115,24 @@
         .card:hover .btn-link {
             background-color: var(--accent);
         }
-        
+
+
+        .logo-main {
+            max-width: 300px;
+            /* Tamaño controlado */
+            height: auto;
+            margin-bottom: 4rem;
+            display: inline-block;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container">
+        <img src="assets/logos/logo_full.svg" alt="Ranking Online Logo" class="logo-main">
         <h1>Selecciona un Template</h1>
-        
+
         <div class="cards-grid">
             <!-- Card Template Light A -->
             <a href="screens/template-light-a/index.html" class="card">
@@ -137,7 +151,8 @@
             </a>
 
             <!-- Card Template Dark -->
-            <a href="screens/template-dark/index.html" class="card" style="background-color: #000529; border-color: #1A235E;">
+            <a href="screens/template-dark/index.html" class="card"
+                style="background-color: #000529; border-color: #1A235E;">
                 <div class="card-icon" style="background-color: #0B1240; color: #FFFFFF;">D</div>
                 <h2 style="color: #FFFFFF;">Template Dark</h2>
                 <p style="color: #9FA9D6;">Diseño de alto impacto con paleta oscura profunda. Moderno y tecnológico.</p>
@@ -147,4 +162,5 @@
     </div>
 
 </body>
+
 </html>
