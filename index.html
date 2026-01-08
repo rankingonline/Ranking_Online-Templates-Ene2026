@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- Boxicons CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         :root {
             --brand-primary: #273480;
@@ -17,6 +19,7 @@
             --text-main: #515683;
             --bg-light: #F4F6FA;
             --white: #FFFFFF;
+            --success: #2ECC71;
         }
 
         * {
@@ -61,7 +64,6 @@
             border-radius: 12px;
             padding: 2rem;
             box-shadow: 0 4px 20px rgba(39, 52, 128, 0.08);
-            /* Sutil sombra con tinte del primario */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none;
             color: inherit;
@@ -69,7 +71,9 @@
             flex-direction: column;
             align-items: center;
             border: 1px solid rgba(197, 203, 230, 0.3);
-            /* brand-100 con opacidad */
+            position: relative;
+            /* Anchor for check */
+            overflow: hidden;
         }
 
         .card:hover {
@@ -116,10 +120,19 @@
             background-color: var(--accent);
         }
 
+        .status-check {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.75rem;
+            color: var(--success);
+            background: rgba(46, 204, 113, 0.1);
+            border-radius: 50%;
+            padding: 0.25rem;
+        }
 
         .logo-main {
             max-width: 300px;
-            /* Tamaño controlado */
             height: auto;
             margin-bottom: 4rem;
             display: inline-block;
@@ -136,6 +149,7 @@
         <div class="cards-grid">
             <!-- Card Template Light A -->
             <a href="screens/template-light-a/index.html" class="card">
+                <i class='bx bxs-check-circle status-check'></i>
                 <div class="card-icon">A</div>
                 <h2>Template Light A</h2>
                 <p>Diseño corporativo limpio y moderno. Ideal para agencias y consultorías generales.</p>
@@ -153,6 +167,7 @@
             <!-- Card Template Dark -->
             <a href="screens/template-dark/index.html" class="card"
                 style="background-color: #000529; border-color: #1A235E;">
+                <i class='bx bxs-check-circle status-check'></i>
                 <div class="card-icon" style="background-color: #0B1240; color: #FFFFFF;">D</div>
                 <h2 style="color: #FFFFFF;">Template Dark</h2>
                 <p style="color: #9FA9D6;">Diseño de alto impacto con paleta oscura profunda. Moderno y tecnológico.</p>
