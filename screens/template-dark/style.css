@@ -1,0 +1,18 @@
+/* CSS Template Dark */
+:root {
+    --brand-primary: #273480;
+    --accent: #2405E5;
+    /* Dark Theme Palette */
+    --dark-base: #000529;
+    --dark-surface: #0B1240;
+    --dark-border: #1A235E;
+    --dark-text-main: #FFFFFF;
+    --dark-text-secondary: #9FA9D6;
+}
+
+body.dark-theme {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text-main);
+    background-color: var(--dark-base);
+    margin: 0;
+}

@@ -1,0 +1,15 @@
+/* CSS Template Light B */
+:root {
+    --brand-primary: #273480;
+    --accent: #2405E5;
+    --text-main: #515683;
+    --bg-light: #F4F6FA;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-main);
+    background-color: var(--white);
+    margin: 0;
+}

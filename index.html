@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Online - Templates</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-primary: #273480;
+            --accent: #2405E5;
+            --text-main: #515683;
+            --bg-light: #F4F6FA;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--brand-primary);
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(39, 52, 128, 0.08); /* Sutil sombra con tinte del primario */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(197, 203, 230, 0.3); /* brand-100 con opacidad */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(39, 52, 128, 0.15);
+            border-color: var(--accent);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: var(--bg-light);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--brand-primary);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--brand-primary);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .btn-link {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--brand-primary);
+            color: var(--white);
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .card:hover .btn-link {
+            background-color: var(--accent);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Selecciona un Template</h1>
+        
+        <div class="cards-grid">
+            <!-- Card Template Light A -->
+            <a href="screens/template-light-a/index.html" class="card">
+                <div class="card-icon">A</div>
+                <h2>Template Light A</h2>
+                <p>Diseño corporativo limpio y moderno. Ideal para agencias y consultorías generales.</p>
+                <div class="btn-link">Ver Template</div>
+            </a>
+
+            <!-- Card Template Light B -->
+            <a href="screens/template-light-b/index.html" class="card">
+                <div class="card-icon">B</div>
+                <h2>Template Light B</h2>
+                <p>Variación estructural con enfoque en servicios. Disposición alternativa de elementos.</p>
+                <div class="btn-link">Ver Template</div>
+            </a>
+
+            <!-- Card Template Dark -->
+            <a href="screens/template-dark/index.html" class="card" style="background-color: #000529; border-color: #1A235E;">
+                <div class="card-icon" style="background-color: #0B1240; color: #FFFFFF;">D</div>
+                <h2 style="color: #FFFFFF;">Template Dark</h2>
+                <p style="color: #9FA9D6;">Diseño de alto impacto con paleta oscura profunda. Moderno y tecnológico.</p>
+                <div class="btn-link">Ver Template</div>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
