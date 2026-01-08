@@ -74,6 +74,34 @@ El diseño utiliza un juego dinámico entre **curvas suaves** y **ángulos recto
 
 ---
 
+### Efectos Visuales: Glassmorphism
+
+Se utiliza un efecto de "cristal esmerilado" para headers flotantes, tarjetas sobre fondos complejos y modales. Esto aporta profundidad y modernidad.
+
+**Reglas de implementación:**
+*   **Fondo:** Color blanco o base con opacidad (ej. `rgba(255, 255, 255, 0.7)`).
+*   **Blur:** `backdrop-filter: blur(12px)` o superior.
+*   **Contorno:** Borde sutil blanco semitransparente (`1px solid rgba(255, 255, 255, 0.5)`) para definir los límites.
+*   **Sombra:** Suave y difusa para levantar el elemento (`box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)`).
+
+---
+
+---
+
+### Adaptabilidad Responsive
+
+El diseño está optimizado para funcionar en múltiples dispositivos. Las reglas clave son:
+
+*   **Breakpoints:**
+    *   **Desktop:** > 1024px
+    *   **Tablet/Laptop:** 768px - 1024px
+    *   **Mobile:** < 768px
+*   **Header:** Se transforma automáticamente. En desktop muestra menú extendido; en mobile oculta enlaces y muestra botón "Hamburguesa".
+*   **Grids:** Pasan de 3 columnas (Desktop) a 2 columnas (Tablet) y 1 columna (Mobile) para mantener la legibilidad.
+*   **Tipografía:** Los tamaños de fuente (`h1`, `p`) se ajustan usando unidades relativas (`rem`) y media queries para evitar textos gigantes en pantallas perqueñas.
+
+---
+
 ## 🚀 Uso
 
 Cada template se encuentra en su propia carpeta:

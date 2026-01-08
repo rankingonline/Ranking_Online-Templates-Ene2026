@@ -10,24 +10,360 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- Boxicons CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">Logo Light A</div>
-            <!-- Menu links placeholder -->
-        </nav>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <img src="../../assets/logos/logo_full.svg" alt="Logo Ranking Online" class="logo">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#casos">Casos de Éxito</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cta-area">
+                <a href="#contacto" class="btn btn-primary">Contacto</a>
+            </div>
+            <div class="mobile-actions">
+                <a href="tel:+123456789" class="mobile-call-btn" aria-label="Llamar">
+                    <i class='bx bxs-phone-call'></i>
+                </a>
+                <button class="mobile-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Template Light A</h1>
-            <p>Estructura base del template claro A.</p>
+        <!-- Hero Section -->
+        <section class="hero-section" id="inicio">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Somos tu asesoría fiscal, laboral y contable en <span class="highlight">[Ciudad]</span></h1>
+                    <p class="hero-subtitle">
+                        En <strong>[Nombre de la asesoría]</strong> llevamos tus impuestos, la contabilidad y la gestión
+                        laboral para que no tengas que preocuparte por nada.
+                    </p>
+                </div>
+
+            </div>
+            <!-- Decorative Element -->
+            <div class="hero-shape"></div>
         </section>
+
+        <!-- Propuesta de Valor -->
+        <section class="value-prop-section" id="servicios">
+            <div class="container">
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="icon-box">
+                            <i class='bx bx-bar-chart-alt-2'></i>
+                        </div>
+                        <h3>¿Qué hacemos?</h3>
+                        <p>En <strong>[Nombre de la asesoría]</strong> ayudamos a autónomos y pequeñas empresas de
+                            [Ciudad] a tener al día su fiscalidad, contabilidad y gestión laboral, sin líos ni
+                            complicaciones.</p>
+                        <p class="mt-2">Nos encargamos de todo el papeleo para que puedas centrarte en lo importante: tu
+                            negocio.</p>
+                    </div>
+
+                    <div class="value-card highlight">
+                        <div class="icon-box">
+                            <i class='bx bx-user-check'></i>
+                        </div>
+                        <h3>¿A quién ayudamos?</h3>
+                        <p>Trabajamos con autónomos y empresas que quieren una asesoría cercana, clara y fácil de
+                            entender, sin tecnicismos ni vueltas innecesarias.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="icon-box">
+                            <i class='bx bx-check-shield'></i>
+                        </div>
+                        <h3>¿Qué problema resolvemos?</h3>
+                        <p>Quitamos de encima el estrés de impuestos, nóminas y contabilidad, evitando errores y sustos
+                            de última hora.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios -->
+        <section class="benefits-section" id="beneficios">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Qué ganas trabajando con <span class="highlight">[Nombre de la
+                            asesoría]</span></h2>
+                </div>
+
+                <div class="benefits-grid">
+                    <!-- Benefit 1 -->
+                    <div class="benefit-card-alt">
+                        <div class="benefit-icon">
+                            <i class='bx bx-happy-heart-eyes'></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Más tranquilidad</h3>
+                            <p>Porque sabes que todo está controlado.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="benefit-card-alt">
+                        <div class="benefit-icon">
+                            <i class='bx bx-time-five'></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Más tiempo</h3>
+                            <p>Para dedicarlo a tu negocio.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="benefit-card-alt">
+                        <div class="benefit-icon">
+                            <i class='bx bx-chat'></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Te acompañamos de verdad</h3>
+                            <p>Explicándote las cosas claras.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 4 -->
+                    <div class="benefit-card-alt">
+                        <div class="benefit-icon">
+                            <i class='bx bx-file-blank'></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Todo en regla</h3>
+                            <p>Sin multas ni sorpresas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pain vs Solution Section -->
+        <section class="comparison-section">
+            <div class="container">
+                <!-- Headers for Desktop -->
+                <div class="comparison-header">
+                    <div class="header-col error-col">
+                        <h3>El lío en el que estás</h3>
+                    </div>
+                    <div class="header-col success-col">
+                        <h3>Cómo te sacamos del apuro en <span class="highlight">[Nombre]</span></h3>
+                    </div>
+                </div>
+
+                <!-- Row 1 -->
+                <div class="comparison-row">
+                    <!-- Pain -->
+                    <div class="comparison-card pain-card">
+                        <div class="card-icon error">
+                            <i class='bx bx-x'></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>¿Leyes nuevas cada dos por tres?</h4>
+                            <p>Es imposible estar al día con tanto cambio en el BOE. Esa sensación de que se te escapa
+                                algo y te pueden multar quita el sueño.</p>
+                        </div>
+                    </div>
+                    <!-- Solution -->
+                    <div class="comparison-card solution-card">
+                        <div class="card-icon success">
+                            <i class='bx bx-check'></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Estamos siempre al día</h4>
+                            <p>Nos leemos la letra pequeña por ti. Vigilamos cada cambio legal para que tu negocio
+                                cumpla siempre con la ley sin que tú tengas que mover un dedo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="comparison-row">
+                    <!-- Pain -->
+                    <div class="comparison-card pain-card">
+                        <div class="card-icon error">
+                            <i class='bx bx-x'></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Horas perdidas entre facturas y nóminas</h4>
+                            <p>El papeleo te roba tiempo para vender, descansar o estar con los tuyos. Al final,
+                                trabajas más para el Estado que para ti.</p>
+                        </div>
+                    </div>
+                    <!-- Solution -->
+                    <div class="comparison-card solution-card">
+                        <div class="card-icon success">
+                            <i class='bx bx-check'></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Te liberamos del "marrón" administrativo</h4>
+                            <p>Nos encargamos de tus impuestos, nóminas y cuentas de arriba a abajo. Tú solo ocúpate de
+                                hacer crecer tu negocio; del resto, nos ocupamos nosotros.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="comparison-row">
+                    <!-- Pain -->
+                    <div class="comparison-card pain-card">
+                        <div class="card-icon error">
+                            <i class='bx bx-x'></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Miedo a los errores (y a Hacienda)</h4>
+                            <p>Un fallo tonto en un papel puede acabar en una multa o en un lío con la administración
+                                que nadie quiere gestionar.</p>
+                        </div>
+                    </div>
+                    <!-- Solution -->
+                    <div class="comparison-card solution-card">
+                        <div class="card-icon success">
+                            <i class='bx bx-check'></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Cero dramas, todo bajo control</h4>
+                            <p>Trabajamos con mil ojos y un método superordenado para que no haya fallos. Te damos la
+                                tranquilidad de saber que todo está perfecto y bien presentado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="trust-section">
+            <div class="container">
+                <div class="trust-grid">
+                    <!-- Item 1 -->
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                        </div>
+                        <h3>Experiencia trabajando con negocios como el tuyo.</h3>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class='bx bx-message-rounded-dots'></i>
+                        </div>
+                        <h3>Trato cercano y comunicación directa.</h3>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                        <h3>Forma de trabajar clara y sin letra pequeña.</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conversion & Contact Section -->
+        <section class="conversion-section" id="contacto">
+            <div class="container">
+                <div class="conversion-header">
+                    <h2 class="section-title">Estamos aquí para ponértelo fácil en <span
+                            class="highlight">[Ciudad]</span></h2>
+                    <p class="conversion-desc">Si buscas una asesoría fiscal, laboral y contable en [Ciudad] que hable
+                        claro y se encargue de todo, cuenta con nosotros.</p>
+                </div>
+
+                <div class="conversion-form-wrapper">
+                    <form class="conversion-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" placeholder="tu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" placeholder="Tu teléfono" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Asunto</label>
+                                <select id="asunto">
+                                    <option value="general">Información General</option>
+                                    <option value="fiscal">Asesoría Fiscal</option>
+                                    <option value="laboral">Asesoría Laboral</option>
+                                    <option value="contable">Contabilidad</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" rows="4" placeholder="¿En qué te podemos ayudar?"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-footer">
+                            <button type="submit" class="btn btn-accent btn-lg">Contactar ahora</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../assets/logos/logo_full_white.svg" alt="Ranking Online Logo">
+                    </div>
+                    <p class="footer-desc">Tu partner de confianza en gestión fiscal, laboral y contable. Simplificamos
+                        tu día a día para que tú solo te preocupes de crecer.</p>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Menú</h4>
+                    <a href="#inicio">Inicio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#casos">Casos de Éxito</a>
+                    <a href="#nosotros">Nosotros</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Legal</h4>
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Política de Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ranking Online. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
