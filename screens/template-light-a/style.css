@@ -630,47 +630,50 @@ body {
     position: absolute;
     filter: blur(60px);
     opacity: 0.4;
-    border-radius: 50%;
-    animation: moveShape 15s infinite alternate ease-in-out;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    /* Formas más orgánicas */
 }
 
 .shape-1 {
-    width: 500px;
-    height: 500px;
+    width: 800px;
+    /* Increased from 500px */
+    height: 800px;
     background: #4C5FD8;
-    /* Un tono más claro del primary */
-    top: -100px;
-    right: -100px;
+    top: -200px;
+    right: -200px;
+    animation: floatShape1 9s infinite alternate ease-in-out;
 }
 
 .shape-2 {
-    width: 400px;
-    height: 400px;
+    width: 700px;
+    /* Increased from 400px */
+    height: 700px;
     background: #2405E5;
-    /* Accent */
-    bottom: -50px;
-    left: -100px;
-    animation-delay: -5s;
+    bottom: -150px;
+    left: -150px;
     opacity: 0.3;
+    animation: floatShape2 9s infinite alternate-reverse ease-in-out;
 }
 
-.shape-3 {
-    width: 300px;
-    height: 300px;
-    background: #6D7BF2;
-    top: 40%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    animation-duration: 20s;
-}
-
-@keyframes moveShape {
+@keyframes floatShape1 {
     0% {
-        transform: translate(0, 0) scale(1);
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     }
 
     100% {
-        transform: translate(40px, -40px) scale(1.1);
+        transform: translate(300px, 150px) rotate(90deg) scale(1.5);
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+@keyframes floatShape2 {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    100% {
+        transform: translate(-300px, -150px) rotate(-90deg) scale(1.5);
     }
 }
 
