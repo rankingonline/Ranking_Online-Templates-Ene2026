@@ -18,4 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Inicializar VanillaTilt en las tarjetas de valor si existe la librería
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".value-card"), {
+            max: 10,            // Máxima rotación
+            speed: 400,         // Velocidad del efecto
+            glare: true,        // Efecto de brillo
+            "max-glare": 0.3,   // Opacidad máxima del brillo
+            scale: 1.05         // Ligero zoom al hacer hover
+        });
+    }
 });
