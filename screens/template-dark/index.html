@@ -10,23 +10,402 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- Boxicons CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="dark-theme">
 
-    <header>
-        <nav>
-            <div class="logo">Logo Dark Mode</div>
-        </nav>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <a href="../../index.html">
+                    <img src="../../assets/logos/logo_full_white.svg" alt="Logo Ranking Online" class="logo">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#casos">Casos de Éxito</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cta-area">
+                <a href="#contacto" class="btn btn-primary">Contacto</a>
+            </div>
+            <div class="mobile-actions">
+                <a href="tel:+123456789" class="mobile-call-btn" aria-label="Llamar">
+                    <i class='bx bxs-phone-call'></i>
+                </a>
+                <button class="mobile-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Template Dark</h1>
-            <p>Estructura base del template osucro.</p>
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Asesoría fiscal, laboral y contable en <span class="highlight">[Ciudad]</span></h1>
+                    <p class="hero-subtitle">
+                        En <strong>[Nombre de la asesoría]</strong> gestionamos sus obligaciones fiscales, laborales y
+                        contables con rigor, profesionalidad y total compromiso con la normativa vigente.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contacto" class="btn btn-primary">Solicitar información</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="video-placeholder">
+                        <div class="play-button">
+                            <span class="play-icon">▶</span>
+                        </div>
+                        <p>Video de Bienvenida</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Propuesta de Valor (Bento Grid Layout) -->
+        <section class="value-prop-section" id="servicios">
+            <div class="container">
+                <div class="bento-grid">
+                    <!-- Item 1: Large Feature (Services) -->
+                    <div class="bento-item main-feature">
+                        <div class="bento-content">
+                            <div class="bento-icon">
+                                <i class='bx bx-briefcase-alt-2'></i>
+                            </div>
+                            <h3>Nuestros servicios</h3>
+                            <p>En <strong>[Nombre de la asesoría]</strong>, asesoría en [Ciudad], ofrecemos un servicio
+                                integral de asesoría fiscal, laboral y contable orientado a garantizar una gestión
+                                ordenada,
+                                eficiente y conforme a la legislación actual.</p>
+                            <p class="mt-2">Nos ocupamos de todos los aspectos administrativos y legales para que
+                                nuestros
+                                clientes puedan centrarse en la gestión y crecimiento de su negocio.</p>
+                        </div>
+                        <div class="bento-deco-line"></div>
+                    </div>
+
+                    <div class="bento-stack">
+                        <!-- Item 2: Target Audience -->
+                        <div class="bento-item target-feature">
+                            <div class="bento-content">
+                                <div class="bento-header">
+                                    <div class="bento-icon small">
+                                        <i class='bx bx-group'></i>
+                                    </div>
+                                    <h3>A quién nos dirigimos</h3>
+                                </div>
+                                <p>Trabajamos con autónomos, pymes y empresas que necesitan delegar la gestión fiscal,
+                                    laboral y
+                                    contable en un equipo profesional.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Problems Solved -->
+                        <div class="bento-item problem-feature">
+                            <div class="bento-content">
+                                <div class="bento-header">
+                                    <div class="bento-icon small">
+                                        <i class='bx bx-check-shield'></i>
+                                    </div>
+                                    <h3>Problemas que resolvemos</h3>
+                                </div>
+                                <p>Evitamos errores, sanciones y problemas derivados de una gestión inadecuada,
+                                    aportando seguridad y tranquilidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios (Tech Linear Grid) -->
+        <section class="benefits-section" id="beneficios">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Beneficios de trabajar con <span class="highlight">[Nombre de la
+                            asesoría]</span></h2>
+                </div>
+
+                <div class="benefits-tech-grid">
+                    <!-- Item 1 -->
+                    <div class="tech-card">
+                        <div class="tech-icon-wrapper">
+                            <i class='bx bx-check-shield'></i>
+                        </div>
+                        <h3>Tranquilidad jurídica</h3>
+                        <p>Al saber que todas las obligaciones están correctamente cumplidas.</p>
+                        <div class="tech-decoration"></div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="tech-card">
+                        <div class="tech-icon-wrapper">
+                            <i class='bx bx-time-five'></i>
+                        </div>
+                        <h3>Ahorro de tiempo</h3>
+                        <p>Al delegar la gestión administrativa en profesionales.</p>
+                        <div class="tech-decoration"></div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="tech-card">
+                        <div class="tech-icon-wrapper">
+                            <i class='bx bx-user-voice'></i>
+                        </div>
+                        <h3>Acompañamiento continuo</h3>
+                        <p>Con asesoramiento claro y personalizado.</p>
+                        <div class="tech-decoration"></div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="tech-card">
+                        <div class="tech-icon-wrapper">
+                            <i class='bx bx-bar-chart-alt-2'></i>
+                        </div>
+                        <h3>Control y planificación</h3>
+                        <p>Para una mejor toma de decisiones empresariales.</p>
+                        <div class="tech-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison / Pain vs Solution -->
+        <section class="comparison-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Principales dificultades de <span class="highlight">nuestros
+                            clientes</span></h2>
+                </div>
+
+                <div class="comparison-tech-container">
+                    <!-- Unit 1 -->
+                    <div class="tech-split-row">
+                        <div class="tech-panel problem">
+                            <div class="panel-header">
+                                <i class='bx bx-error-circle'></i>
+                                <h4>Inestabilidad por cambios legislativos</h4>
+                            </div>
+                            <p>La constante evolución de la normativa fiscal y laboral genera un entorno de
+                                incertidumbre y eleva el riesgo de incumplimiento involuntario.</p>
+                        </div>
+                        <div class="tech-connector">
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </div>
+                        <div class="tech-panel solution">
+                            <div class="panel-header">
+                                <i class='bx bx-check-circle'></i>
+                                <h4>Vigilancia legislativa continua</h4>
+                            </div>
+                            <p>Implementamos un sistema de monitoreo permanente de la normativa vigente, garantizando
+                                que la gestión de sus obligaciones se ajuste estrictamente al marco legal actualizado.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Unit 2 -->
+                    <div class="tech-split-row">
+                        <div class="tech-panel problem">
+                            <div class="panel-header">
+                                <i class='bx bx-time'></i>
+                                <h4>Carga administrativa excesiva</h4>
+                            </div>
+                            <p>La gestión técnica de tributos, nóminas y estados contables demanda una inversión de
+                                tiempo y recursos que compromete la operatividad de la empresa.</p>
+                        </div>
+                        <div class="tech-connector">
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </div>
+                        <div class="tech-panel solution">
+                            <div class="panel-header">
+                                <i class='bx bx-briefcase-alt'></i>
+                                <h4>Externalización integral de procesos</h4>
+                            </div>
+                            <p>Asumimos la responsabilidad técnica de las áreas fiscal, laboral y contable, permitiendo
+                                que la dirección enfoque sus recursos exclusivamente en su actividad estratégica.</p>
+                        </div>
+                    </div>
+
+                    <!-- Unit 3 -->
+                    <div class="tech-split-row">
+                        <div class="tech-panel problem">
+                            <div class="panel-header">
+                                <i class='bx bx-shield-x'></i>
+                                <h4>Exposición a riesgos y sanciones</h4>
+                            </div>
+                            <p>Las deficiencias en la gestión administrativa pueden derivar en requerimientos,
+                                incidencias o sanciones económicas por parte de la Administración Pública.</p>
+                        </div>
+                        <div class="tech-connector">
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </div>
+                        <div class="tech-panel solution">
+                            <div class="panel-header">
+                                <i class='bx bx-badge-check'></i>
+                                <h4>Metodología de control de calidad</h4>
+                            </div>
+                            <p>Aplicamos protocolos de trabajo rigurosos y procesos de verificación que minimizan el
+                                riesgo operativo, asegurando la solvencia administrativa y la tranquilidad de nuestros
+                                clientes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Trust Section (Data Strip) -->
+        <section class="trust-section">
+            <div class="container">
+                <div class="trust-strip">
+                    <!-- Item 1 -->
+                    <div class="trust-item">
+                        <div class="trust-icon-box">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                        </div>
+                        <div class="trust-text">
+                            <h3>Equipo profesional</h3>
+                            <p>Con experiencia en asesoramiento empresarial.</p>
+                        </div>
+                    </div>
+
+                    <div class="trust-divider"></div>
+
+                    <!-- Item 2 -->
+                    <div class="trust-item">
+                        <div class="trust-icon-box">
+                            <i class='bx bx-layer'></i>
+                        </div>
+                        <div class="trust-text">
+                            <h3>Metodología estructurada</h3>
+                            <p>Transparente y orientada a resultados.</p>
+                        </div>
+                    </div>
+
+                    <div class="trust-divider"></div>
+
+                    <!-- Item 3 -->
+                    <div class="trust-item">
+                        <div class="trust-icon-box">
+                            <i class='bx bx-user-pin'></i>
+                        </div>
+                        <div class="trust-text">
+                            <h3>Atención personalizada</h3>
+                            <p>Trato profesional en todo momento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+
+        <!-- Contact Section (Tech Grid) -->
+        <section class="contact-section" id="contacto">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Text Side -->
+                    <div class="contact-info-col">
+                        <h2 class="section-title text-left">Asesoría fiscal, laboral y contable en <span
+                                class="highlight">[Ciudad]</span> al servicio de su negocio</h2>
+                        <p class="contact-desc">Confiar su gestión fiscal, laboral y contable a una asesoría profesional
+                            es una decisión estratégica para la estabilidad y el crecimiento de su negocio.</p>
+
+                        <div class="contact-data-tech">
+                            <div class="data-item">
+                                <i class='bx bx-map'></i>
+                                <span>Av. del General Perón, 22, 28020 Madrid</span>
+                            </div>
+                            <div class="data-item">
+                                <i class='bx bx-phone'></i>
+                                <a href="tel:+34915360268">+34 915 36 02 68</a>
+                            </div>
+                            <div class="data-item">
+                                <i class='bx bx-envelope'></i>
+                                <a href="mailto:info@asesoria.com">info@asesoria.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Side -->
+                    <div class="contact-form-col">
+                        <form class="tech-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Teléfono</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Teléfono de contacto">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Consulta</label>
+                                <textarea id="message" name="message" rows="4"
+                                    placeholder="Describa brevemente su consulta" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block tech-submit">
+                                Contacte con nuestro equipo y solicite asesoramiento
+                                <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../assets/logos/logo_full_white.svg" alt="Ranking Online Logo">
+                    </div>
+                    <p class="footer-desc">Tu partner de confianza en gestión fiscal, laboral y contable. Simplificamos
+                        tu
+                        día a día para que tú solo te preocupes de crecer.</p>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Menú</h4>
+                    <a href="#inicio">Inicio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#casos">Casos de Éxito</a>
+                    <a href="#nosotros">Nosotros</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Legal</h4>
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Política de Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ranking Online. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
