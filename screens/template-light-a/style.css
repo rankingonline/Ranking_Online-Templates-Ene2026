@@ -147,13 +147,68 @@ body {
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-    max-width: 900px;
+    grid-template-columns: 1.2fr 0.8fr;
+    /* Two columns split */
+    align-items: center;
+    text-align: left;
+    /* Aligned left for desktop */
+    max-width: 1200px;
+    /* Increased max-width */
     margin: 0 auto;
-    gap: 2rem;
+    gap: 4rem;
     position: relative;
     z-index: 5;
+}
+
+/* Hero Form Styles */
+.hero-form-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(39, 52, 128, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    text-align: left;
+}
+
+.hero-form-wrapper h3 {
+    color: var(--brand-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hero-form-wrapper p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.hero-contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.hero-contact-form input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(81, 86, 131, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    transition: all 0.3s;
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width */
+}
+
+.hero-contact-form input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(36, 5, 229, 0.1);
 }
 
 /* Background Blobs - Perpetual Orbital Motion */
@@ -744,7 +799,7 @@ body {
 /* Dynamic Benefits Card */
 .benefit-card-alt {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.5rem;
     padding: 2.5rem;
 
@@ -1154,11 +1209,12 @@ body {
 
 /* Contact Section */
 .contact-section {
-    padding: 6rem 0;
-    margin-top: 4rem;
-    background-color: transparent;
+    padding: 8rem 0;
+    margin-top: 0;
+    background-color: var(--brand-primary);
     position: relative;
     z-index: 2;
+    color: var(--white);
 }
 
 .contact-container {
@@ -1173,11 +1229,19 @@ body {
     margin-bottom: 1.5rem;
     margin-top: 0;
     font-size: 2.25rem;
+    color: var(--white);
+}
+
+.contact-content .section-title .highlight {
+    /* Ensure highlight is visible on dark bg */
+    background: linear-gradient(120deg, #A5B4FC 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact-subtitle {
     font-size: 1.1rem;
-    color: var(--text-main);
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: 3rem;
     max-width: 90%;
 }
@@ -1194,26 +1258,26 @@ body {
     align-items: center;
     gap: 1rem;
     font-size: 1.05rem;
-    color: var(--text-main);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .contact-item i {
     font-size: 1.5rem;
-    color: var(--accent);
-    background: rgba(36, 5, 229, 0.1);
+    color: var(--brand-primary);
+    background: var(--white);
     padding: 0.75rem;
     border-radius: 12px;
 }
 
 .contact-item a {
-    color: var(--text-main);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     transition: color 0.3s;
     font-weight: 500;
 }
 
 .contact-item a:hover {
-    color: var(--accent);
+    color: var(--white);
 }
 
 .social-links {
@@ -1227,17 +1291,18 @@ body {
     justify-content: center;
     width: 48px;
     height: 48px;
-    background-color: var(--bg-light);
-    color: var(--brand-primary);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
     border-radius: 12px;
     font-size: 1.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .social-links a:hover {
-    background-color: var(--brand-primary);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--brand-primary);
     transform: translateY(-5px);
 }
 
@@ -1398,4 +1463,218 @@ body {
     .footer-links-col {
         align-items: center;
     }
+}
+
+/* About Us Section */
+.about-section {
+    padding: 8rem 0;
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: visible;
+    /* Allow shape to protrude */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.about-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--brand-primary);
+    top: 30px;
+    left: -30px;
+    border-radius: 20px;
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.about-content h2 {
+    margin-bottom: 2rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 968px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-image {
+        order: -1;
+        /* Image on top on mobile */
+    }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 8rem 0;
+    background-color: var(--bg-light);
+    position: relative;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.review-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reviewer-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: var(--brand-primary);
+    font-size: 1rem;
+}
+
+.review-date {
+    font-size: 0.85rem;
+    color: #9CA3AF;
+}
+
+.google-icon {
+    font-size: 1.5rem;
+    color: #4285F4;
+    /* Google Blue */
+}
+
+.star-rating {
+    color: #FFC107;
+    /* Star Yellow */
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 8rem 0;
+    background-color: var(--white);
+    position: relative;
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 1.5rem;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.faq-question h3 {
+    font-size: 1.15rem;
+    color: var(--brand-primary);
+    margin: 0;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.faq-question i {
+    font-size: 1.5rem;
+    color: var(--accent);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question h3 {
+    color: var(--accent);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.faq-answer p {
+    color: var(--text-main);
+    line-height: 1.6;
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
