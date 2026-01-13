@@ -1115,3 +1115,181 @@ body {
         justify-content: center;
     }
 }
+
+/* About Us Section B */
+.about-section-b {
+    padding: 6rem 0;
+    background-color: var(--white);
+}
+
+.about-container-b {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text-col p {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.about-image-col {
+    position: relative;
+}
+
+.about-img-b {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+    .about-container-b {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image-col {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Testimonials Section B */
+.testimonials-section-b {
+    padding: 6rem 0;
+    background-color: var(--bg-light);
+}
+
+.testimonials-grid-b {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.review-card-b {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-card-b:hover {
+    transform: translateY(-5px);
+}
+
+.review-stars-b {
+    color: #FFC107;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.review-text-b {
+    color: var(--text-color);
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.reviewer-info-b {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 1.5rem;
+}
+
+.reviewer-details-b {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-name-b {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.reviewer-meta-b {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.google-icon-b {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* FAQ Section B */
+.faq-section-b {
+    padding: 6rem 0;
+    background-color: var(--white);
+}
+
+.faq-grid-b {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item-b {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 1.5rem;
+}
+
+.faq-question-b {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.faq-question-b h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin: 0;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.faq-question-b i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-item-b.active .faq-question-b h3 {
+    color: var(--accent-color);
+}
+
+.faq-item-b.active .faq-question-b i {
+    transform: rotate(180deg);
+}
+
+.faq-answer-b {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.faq-answer-b p {
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
