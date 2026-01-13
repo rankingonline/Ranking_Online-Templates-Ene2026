@@ -1178,3 +1178,206 @@ body.dark-theme {
         gap: 1rem;
     }
 }
+
+/* About Us - Dark Tech */
+.about-section {
+    padding: 6rem 0;
+    background-color: var(--dark-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-content-col h2 {
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.about-content-col p {
+    color: var(--dark-text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(40%);
+    /* Slightly desaturated for tech look */
+    transition: filter 0.3s ease;
+}
+
+.tech-image-wrapper:hover img {
+    filter: grayscale(0%);
+}
+
+.tech-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(36, 5, 229, 0.2) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+@media (max-width: 968px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Testimonials - Dark Tech */
+.testimonials-section {
+    padding: 6rem 0;
+    background-color: #05081A;
+    border-top: 1px solid var(--dark-border);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.tech-review-card {
+    background: rgba(11, 18, 64, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-review-card:hover {
+    background: rgba(11, 18, 64, 0.8);
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.review-stars {
+    color: #FFC107;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.tech-review-card p {
+    color: var(--dark-text-main);
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+.reviewer-info .name {
+    font-weight: 600;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.reviewer-info .role {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-top: 0.25rem;
+}
+
+/* FAQ Section - Dark Tech */
+.faq-section {
+    padding: 6rem 0;
+    background-color: var(--dark-base);
+    border-top: 1px solid var(--dark-border);
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 4rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background: rgba(11, 18, 64, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active {
+    background: rgba(11, 18, 64, 0.8);
+    border-color: rgba(36, 5, 229, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--white);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.faq-item.active .faq-question h3 {
+    color: var(--accent);
+}
+
+.faq-question i {
+    font-size: 1.5rem;
+    color: var(--dark-text-secondary);
+    transition: transform 0.3s ease, color 0.3s;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(45deg);
+    color: var(--accent);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.faq-answer p {
+    padding: 0 2rem 1.5rem;
+    margin: 0;
+    color: var(--dark-text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
