@@ -1468,3 +1468,111 @@ body {
         gap: 1rem;
     }
 }
+
+/* Services Clean Grid Section (Template B) */
+.services-clean-section {
+    padding: 6rem 0;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.services-clean-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+}
+
+.service-clean-card {
+    display: flex;
+    gap: 2rem;
+    padding: 2.5rem;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    /* Slightly sharper corners for semi-formal */
+    transition: all 0.3s ease;
+    align-items: flex-start;
+}
+
+.service-clean-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Professional shadow */
+    border-color: rgba(39, 52, 128, 0.2);
+    transform: translateY(-5px);
+}
+
+.service-clean-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #F4F6FA;
+    color: var(--brand-primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.service-clean-card:hover .service-clean-icon {
+    background-color: var(--brand-primary);
+    color: var(--white);
+}
+
+.service-clean-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-clean-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin-bottom: 0.75rem;
+}
+
+.service-clean-content p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.service-link {
+    font-size: 0.9rem;
+    color: var(--brand-primary);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: gap 0.3s ease;
+}
+
+.service-link i {
+    font-size: 1.1rem;
+}
+
+.service-link:hover {
+    gap: 0.5rem;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .services-clean-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .service-clean-card {
+        padding: 2rem;
+        flex-direction: column;
+        /* Stack icon on top in mobile for this layout */
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+}

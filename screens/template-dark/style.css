@@ -1535,3 +1535,295 @@ body.dark-theme {
     display: block;
     /* Centered block */
 }
+
+/* Services Bento Section (Dark Tech) */
+/* Services Bento Section (Dark Tech) */
+.services-bento-section {
+    padding: 8rem 0;
+    background-color: #020412;
+    position: relative;
+    border-top: 1px solid var(--dark-border);
+}
+
+.services-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+    /* Center vertically relative to text if needed, or start */
+    align-items: start;
+}
+
+.services-text-block {
+    position: sticky;
+    top: 150px;
+}
+
+.services-text-block .section-title {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+/* New condensed list style */
+.service-list-check {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-list-check li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: var(--dark-text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.service-list-check li i {
+    color: var(--accent);
+    font-size: 1.5rem;
+    background: rgba(36, 5, 229, 0.1);
+    border-radius: 50%;
+    padding: 2px;
+    margin-top: -2px;
+}
+
+.services-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.bento-card {
+    background: #0B1130;
+    border-radius: 16px;
+    /* Slightly tighter radius */
+    padding: 1.5rem;
+    /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    min-height: 180px;
+    /* Reduced uniform height */
+}
+
+.card-content h3 {
+    font-size: 1.35rem;
+    /* Slightly smaller title */
+    font-weight: 600;
+    color: var(--white);
+    margin: 0 0 0.5rem 0;
+    /* Reduced margin */
+}
+
+.card-content p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    /* Reduced margin */
+}
+
+/* Ensure padding below button is minimal */
+.bento-card .btn-outline-pill {
+    margin-top: auto;
+    width: fit-content;
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-pill {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-pill:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+}
+
+
+@media (max-width: 992px) {
+    .services-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .services-text-block {
+        position: static;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.services-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: flex-start;
+}
+
+.services-text-block {
+    position: sticky;
+    top: 150px;
+}
+
+.services-text-block .section-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.service-desc {
+    font-size: 1.1rem;
+    color: var(--dark-text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.services-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.bento-card {
+    background: #0B1130;
+    /* Dark blue background */
+    border-radius: 24px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    min-height: 280px;
+}
+
+.bento-card h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0 0 1rem 0;
+}
+
+.bento-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Highlight Card Style (Orange/Accent) */
+.bento-card.highlight-card {
+    background: #E87A2E;
+    /* As requested in image reference approx */
+    background: linear-gradient(135deg, #FF914D 0%, #E06C1F 100%);
+    border: none;
+}
+
+.bento-card.highlight-card h3,
+.bento-card.highlight-card p {
+    color: var(--white);
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons inside cards */
+.btn-pill {
+    background: var(--white);
+    color: #E06C1F;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.btn-pill:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-pill {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.btn-outline-pill:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
+}
+
+/* Light/purple background for non-highlight cards to match reference vibe but kept dark for consistency */
+/* Actually, let's adapt to fit "Dark Theme" but keep the structure. 
+   If user wants exact light purple background cards like image, it would break dark mode.
+   I will use a very dark violet/blue surface to keep comparison valid. 
+*/
+.bento-card:not(.highlight-card) {
+    background: #141835;
+}
+
+
+@media (max-width: 992px) {
+    .services-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .services-text-block {
+        position: static;
+        max-width: 100%;
+    }
+
+    .services-text-block .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

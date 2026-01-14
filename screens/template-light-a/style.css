@@ -1813,3 +1813,110 @@ body {
     margin-top: 1rem;
     margin-bottom: 0;
 }
+
+/* Services List Section (New) */
+.services-list-section {
+    padding: 6rem 0;
+    background-color: var(--white);
+    position: relative;
+    border-bottom: 1px solid var(--gray-50);
+}
+
+/* Services List Row Layout */
+.services-list-rows {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    border-top: 2px solid var(--brand-primary);
+    /* Strong top border */
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+    border-bottom: 2px solid var(--brand-primary);
+    /* Consistent dividers */
+    transition: background-color 0.3s ease;
+}
+
+.service-row:hover {
+    background-color: rgba(39, 52, 128, 0.02);
+    /* Very subtle hover */
+}
+
+.service-title-col h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.service-title-col h3 i {
+    font-size: 1.5rem;
+    color: #A0AEC0;
+    /* Lighter arrow color initially */
+    transform: rotate(45deg);
+    /* Point top-right */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-row:hover .service-title-col h3 i {
+    transform: rotate(45deg) translate(2px, -2px);
+    color: var(--accent);
+}
+
+.service-content-col {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 0 0 60%;
+    /* Take up to 60% of width */
+}
+
+.service-icon-pill {
+    width: 60px;
+    height: 40px;
+    background-color: #F0F4FF;
+    /* Light pill bg */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-primary);
+    flex-shrink: 0;
+}
+
+.service-icon-pill i {
+    font-size: 1.25rem;
+}
+
+.service-content-col p {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .service-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 2rem 0;
+    }
+
+    .service-content-col {
+        flex: 1;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .service-title-col h3 {
+        font-size: 1.5rem;
+    }
+}
