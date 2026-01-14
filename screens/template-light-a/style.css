@@ -2085,5 +2085,179 @@ body {
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
+
+    }
+}
+
+/* Dual Feature Section */
+.dual-feature-section {
+    padding: 0;
+    overflow: hidden;
+    /* Optional: Full width background wrapper if needed */
+}
+
+.dual-feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+}
+
+.dual-col {
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Left Column: Light/White Style */
+.dual-col.left-col {
+    background-color: var(--bg-light);
+    /* Or slightly darker gray if needed */
+    color: var(--text-main);
+}
+
+.dual-col.left-col .eyebrow {
+    background-color: #DBEAFE;
+    color: var(--brand-primary);
+}
+
+.dual-col.left-col h2 {
+    color: var(--brand-primary);
+}
+
+.dual-col.left-col .feature-list li {
+    color: var(--text-main);
+}
+
+.dual-col.left-col .feature-list li i {
+    color: var(--accent);
+    /* Or Brand Primary */
+}
+
+/* Right Column: Dark/Primary Style */
+.dual-col.right-col {
+    background-color: var(--brand-primary);
+    color: var(--white);
+}
+
+.dual-col.right-col .eyebrow {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    /* Light Blue-ish for eyebrow on dark */
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    align-self: flex-start;
+}
+
+.dual-col.right-col h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.dual-col.right-col .feature-list li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.dual-col.right-col .feature-list li i {
+    color: #4ADE80;
+    /* Green check or light accent */
+    color: var(--accent);
+    /* Or maybe white/lighter blue */
+    /* Let's stick to a clean look */
+    color: #fff;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    align-self: flex-start;
+}
+
+.dual-col h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.dual-feature-img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+}
+
+.feature-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 1.05rem;
+}
+
+.feature-list li i {
+    font-size: 1.25rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* Button variants for the cols */
+.btn-feature-light {
+    background-color: var(--brand-primary);
+    color: #fff;
+    align-self: flex-start;
+}
+
+.btn-feature-light:hover {
+    background-color: var(--accent);
+}
+
+.btn-feature-dark {
+    background-color: #fff;
+    /* Button on dark bg */
+    color: var(--brand-primary);
+    align-self: flex-start;
+}
+
+.btn-feature-dark:hover {
+    background-color: var(--gray-50);
+}
+
+
+@media (max-width: 992px) {
+    .dual-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dual-col {
+        padding: 4rem 2rem;
+    }
+
+    .dual-col h2 {
+        font-size: 2rem;
     }
 }

@@ -1717,3 +1717,186 @@ body {
         margin-right: auto;
     }
 }
+
+
+/* Dual Feature Section (Split Two-Tone Theme) */
+.dual-feature-section-b {
+    padding: 2rem 0;
+    /* Reduced vertical padding since the grid has its own padding */
+}
+
+.dual-feature-grid-b {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 30px;
+    /* Larger, smoother radius */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    /* Stronger shadow for the whole block */
+    background-color: #fff;
+    /* Fallback */
+}
+
+.dual-col-b {
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; Removed to allow margin-top: auto to work */
+    height: 100%;
+    /* Ensure it fills the grid cell */
+}
+
+/* Left Col: Light Tone (White or very soft tint) */
+.dual-col-b.left-col {
+    background-color: #fff;
+    color: var(--text-main);
+}
+
+/* Right Col: Dark Tone (Brand Primary) */
+.dual-col-b.right-col {
+    background-color: var(--brand-primary);
+    color: var(--white);
+    position: relative;
+    /* subtle pattern or gradient optional */
+    background-image: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-dark) 100%);
+}
+
+/* Eyebrows (Pills) */
+.eyebrow-b {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    align-self: flex-start;
+}
+
+.dual-col-b.left-col .eyebrow-b {
+    background-color: #F0F3FF;
+    color: var(--brand-primary);
+}
+
+.dual-col-b.right-col .eyebrow-b {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Headings */
+.dual-col-b h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.dual-col-b.right-col h2 {
+    color: var(--white);
+}
+
+/* Images */
+.dual-feature-img-b {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    /* Smooth corners */
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature Lists */
+.feature-list-b {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2.5rem;
+}
+
+.feature-list-b li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.feature-list-b li i {
+    font-size: 1.4rem;
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+/* Left List Styling */
+.dual-col-b.left-col .feature-list-b li {
+    color: var(--text-secondary);
+}
+
+.dual-col-b.left-col .feature-list-b li i {
+    color: var(--accent);
+    /* Bright Blue */
+}
+
+/* Right List Styling */
+.dual-col-b.right-col .feature-list-b li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.dual-col-b.right-col .feature-list-b li i {
+    color: #60A5FA;
+    /* Light Blue / Cyan for contrast on dark */
+    /* No orange */
+}
+
+/* Buttons */
+.btn-feature-b {
+    font-weight: 600;
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    align-self: flex-start;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+/* Left Button (Dark on Light) */
+.btn-feature-b.btn-left {
+    background-color: var(--brand-primary);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(39, 52, 128, 0.3);
+}
+
+.btn-feature-b.btn-left:hover {
+    background-color: var(--brand-dark);
+    transform: translateY(-2px);
+}
+
+/* Right Button (Light on Dark) */
+.btn-feature-b.btn-right {
+    background-color: #fff;
+    color: var(--brand-primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-feature-b.btn-right:hover {
+    background-color: #F0F3FF;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .dual-feature-grid-b {
+        grid-template-columns: 1fr;
+    }
+
+    .dual-col-b {
+        padding: 3.5rem 2rem;
+    }
+}
