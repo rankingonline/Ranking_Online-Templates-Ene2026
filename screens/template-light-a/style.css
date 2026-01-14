@@ -1827,7 +1827,8 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
-    border-top: 2px solid var(--brand-primary);
+    border-top: 2px solid rgba(39, 52, 128, 0.2);
+    /* Faded border */
     /* Strong top border */
 }
 
@@ -1836,7 +1837,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 2.5rem 0;
-    border-bottom: 2px solid var(--brand-primary);
+    border-bottom: 2px solid rgba(39, 52, 128, 0.2);
+    /* Faded border */
     /* Consistent dividers */
     transition: background-color 0.3s ease;
 }
