@@ -125,7 +125,7 @@ body {
 
 /* Hero Section - Creative Refinement */
 .hero-section {
-    padding: 8rem 0 10rem;
+    padding: 4rem 0 6rem;
     /* Fondo animado con degradado suave */
     background: linear-gradient(-45deg, #ffffff, #f4f6fa, #e9ebf5, #ffffff);
     background-size: 400% 400%;
@@ -179,6 +179,9 @@ body {
     color: var(--brand-primary);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    margin-top: 0;
+    padding-top: 0;
+    /* Ensure no extra top padding interferes */
     font-weight: 600;
     text-align: center;
 }
@@ -304,6 +307,7 @@ body {
     display: inline-block;
     background: linear-gradient(120deg, var(--accent) 0%, #6E44FF 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
 }
@@ -406,7 +410,7 @@ body {
 
 /* Value Props - Glassmorphism Enhanced */
 .value-prop-section {
-    padding: 8rem 0;
+    padding: 4rem 0;
     background-color: var(--white);
     /* Fallback */
     background: linear-gradient(135deg, #fceeff 0%, #f5f7ff 100%);
@@ -653,6 +657,12 @@ body {
         left: 0;
     }
 
+    .hero-section {
+        padding-top: 8rem;
+        /* Space for fixed header */
+        padding-bottom: 4rem;
+    }
+
     .header-container {
         padding: 0 1.5rem;
     }
@@ -756,6 +766,16 @@ body {
 
     .hero-content {
         text-align: center;
+    }
+
+    .hero-list {
+        text-align: left;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    .google-review-widget {
+        margin: 0 auto;
     }
 
     .hero-content h1 {
@@ -899,6 +919,7 @@ body {
     /* Color claro complementario */
     background: linear-gradient(120deg, #A5B4FC 0%, #fff 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1190,7 +1211,7 @@ body {
 
 /* Trust Section */
 .trust-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background-color: var(--bg-light);
     position: relative;
     overflow: hidden;
@@ -1323,7 +1344,7 @@ body {
 
 /* Contact Section */
 .contact-section {
-    padding: 8rem 0;
+    padding: 4rem 0;
     margin-top: 0;
     background-color: var(--brand-primary);
     position: relative;
@@ -1350,6 +1371,7 @@ body {
     /* Ensure highlight is visible on dark bg */
     background: linear-gradient(120deg, #A5B4FC 0%, #fff 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1394,30 +1416,9 @@ body {
     color: var(--white);
 }
 
+/* Social links removed as requested */
 .social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--white);
-    border-radius: 12px;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.social-links a:hover {
-    background-color: var(--white);
-    color: var(--brand-primary);
-    transform: translateY(-5px);
+    display: none;
 }
 
 /* Contact Form */
@@ -1602,7 +1603,7 @@ body {
 
 /* About Us Section */
 .about-section {
-    padding: 8rem 0;
+    padding: 4rem 0;
     background-color: var(--white);
     position: relative;
     overflow: hidden;
@@ -1669,7 +1670,7 @@ body {
 
 /* Testimonials Section */
 .testimonials-section {
-    padding: 8rem 0;
+    padding: 4rem 0;
     background-color: var(--bg-light);
     position: relative;
 }
@@ -1753,7 +1754,8 @@ body {
 
 /* FAQ Section */
 .faq-section {
-    padding: 8rem 0;
+    padding: 2rem 0 4rem;
+    /* Reduced top padding */
     background-color: var(--white);
     position: relative;
 }
@@ -1816,7 +1818,8 @@ body {
 
 /* Services List Section (New) */
 .services-list-section {
-    padding: 6rem 0;
+    padding: 1rem 0 4rem;
+    /* Reduced top padding significantly */
     background-color: var(--white);
     position: relative;
     border-bottom: 1px solid var(--gray-50);
@@ -1925,7 +1928,7 @@ body {
 
 /* Reality vs Approach Section */
 .reality-vs-approach-section {
-    padding: 6rem 0;
+    padding: 2rem 0;
     background-color: #f8fafc;
 }
 
@@ -1933,7 +1936,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
+    /* Reduced from 3rem */
     margin-bottom: 3rem;
 }
 
@@ -1959,7 +1963,8 @@ body {
 }
 
 .problem-block {
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem;
+    /* Reduced bottom padding */
     flex-grow: 1;
     background: #ffffff;
     border-bottom: 1px dashed #e2e8f0;
@@ -2266,20 +2271,24 @@ body {
 
 /* Step by Step Section (Process Timeline) */
 .steps-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background-color: var(--white);
 }
 
 .steps-intro {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 5rem;
+    margin: 0 auto 1rem;
+    /* Reduced margin bottom */
 }
 
 .steps-intro h2 {
     font-size: 2.5rem;
     color: var(--brand-primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    /* Reduced margin bottom */
+    margin-top: 0;
+    /* Reduced margin top */
     font-weight: 700;
 }
 
@@ -2294,7 +2303,8 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     position: relative;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    /* Reduced from 2rem */
     /* Space for numbers if using absolute */
 }
 
