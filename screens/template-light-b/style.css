@@ -48,6 +48,19 @@ body {
     background-color: var(--brand-primary);
     color: var(--white);
     box-shadow: 0 4px 10px rgba(39, 52, 128, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.desktop-only {
+    display: block;
+}
+
+@media (max-width: 968px) {
+    .desktop-only {
+        display: none;
+    }
 }
 
 .btn-primary:hover {
@@ -331,6 +344,13 @@ body {
 
 /* Responsive */
 @media (max-width: 968px) {
+    #main-header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
     .hero-section::before {
         display: none;
         /* Remove slant on mobile */
@@ -355,10 +375,25 @@ body {
     }
 
     /* Mobile Menu Logic (Simplified version of styles) */
-    .mobile-actions,
+    /* Mobile Menu Logic */
+    .mobile-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        z-index: 1001;
+        /* Ensure it stays on top */
+        position: relative;
+    }
+
     .mobile-toggle {
-        display: block;
-        /* Show triggers */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1001;
     }
 
     .nav-menu {
@@ -366,27 +401,27 @@ body {
         /* Hidden by default */
         position: fixed;
         top: 70px;
+        /* Adjust based on header height */
         left: 0;
         width: 100%;
         background: var(--white);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        padding: 1rem;
+        padding: 1.5rem;
+        z-index: 999;
+        flex-direction: column;
+        text-align: center;
     }
 
     .nav-menu.active {
-        display: block;
+        display: flex;
     }
 
     .nav-menu ul {
         flex-direction: column;
-        gap: 1rem;
-    }
-
-    .mobile-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     .mobile-toggle span {
@@ -394,15 +429,28 @@ body {
         width: 25px;
         height: 3px;
         background-color: var(--brand-primary);
-        margin: 5px 0;
+        margin: 4px 0;
+        transition: all 0.3s ease;
     }
 
     .mobile-call-btn {
-        margin-right: 1rem;
-        font-size: 1.5rem;
-        color: var(--brand-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: var(--brand-primary);
+        color: var(--white);
+        border-radius: 50%;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-call-btn i {
+        font-size: 1.35rem;
     }
 }
+
 
 /* Value Proposition (Split Sticky) */
 .value-prop-split {
