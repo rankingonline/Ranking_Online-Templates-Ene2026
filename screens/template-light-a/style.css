@@ -2261,3 +2261,119 @@ body {
         font-size: 2rem;
     }
 }
+
+/* Step by Step Section (Process Timeline) */
+.steps-section {
+    padding: 6rem 0;
+    background-color: var(--white);
+}
+
+.steps-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+}
+
+.steps-intro h2 {
+    font-size: 2.5rem;
+    color: var(--brand-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.steps-intro p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+    padding-top: 2rem;
+    /* Space for numbers if using absolute */
+}
+
+/* Connecting Line */
+.steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    /* Adjust based on icon/number position */
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: #E2E8F0;
+    z-index: 0;
+    display: none;
+    /* Hidden on mobile usually, distinct styling needed */
+}
+
+@media (min-width: 992px) {
+    .steps-grid::before {
+        display: block;
+    }
+}
+
+.step-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-color: var(--border-color);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--brand-primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+    /* Center align for typical step layout */
+    box-shadow: 0 4px 10px rgba(39, 52, 128, 0.2);
+    position: relative;
+}
+
+.step-card h3 {
+    font-size: 1.25rem;
+    color: var(--brand-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+    /* Center align titles in steps */
+}
+
+.step-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .steps-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}

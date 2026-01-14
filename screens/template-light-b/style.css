@@ -1900,3 +1900,80 @@ body {
         padding: 3.5rem 2rem;
     }
 }
+
+/* Step by Step Section B (Friendly Side-by-Side or ZigZag) */
+.steps-section-b {
+    padding: 6rem 0;
+    background-color: #FAFAFA;
+}
+
+.steps-intro-b {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.steps-intro-b h2 {
+    font-size: 2.25rem;
+    color: var(--brand-primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.steps-intro-b p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.steps-container-b {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.step-item-b {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+    gap: 1.5rem;
+}
+
+.step-item-b:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.step-number-b {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #E0E7FF;
+    /* Very light primary */
+    line-height: 1;
+    min-width: 60px;
+    text-align: center;
+}
+
+.step-content-b h3 {
+    font-size: 1.25rem;
+    color: var(--brand-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.step-content-b p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .steps-container-b {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
