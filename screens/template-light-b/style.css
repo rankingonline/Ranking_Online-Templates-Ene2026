@@ -1136,7 +1136,8 @@ body {
 .footer-b {
     background-color: var(--brand-primary);
     color: var(--white);
-    padding: 5rem 0 2rem;
+    padding: 2rem 0 1rem;
+    /* Reduced padding */
     position: relative;
     border-top: none;
 }
@@ -1179,6 +1180,12 @@ body {
 
 .footer-logo {
     margin-bottom: 2rem;
+}
+
+.footer-logo img {
+    height: 80px;
+    /* Increased size */
+    width: auto;
 }
 
 .footer-col ul {
@@ -1455,9 +1462,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .footer-legal-links {
