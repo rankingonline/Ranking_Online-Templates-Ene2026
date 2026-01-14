@@ -1576,3 +1576,144 @@ body {
         align-items: flex-start;
     }
 }
+
+/* Reality vs Approach Section (Semi-formal) */
+.reality-vs-approach-section {
+    padding: 6rem 0;
+    background-color: var(--light-surface);
+}
+
+.reality-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+.reality-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.reality-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.problem-block {
+    padding: 2rem;
+    flex-grow: 1;
+    background: #fff;
+    position: relative;
+}
+
+.icon-bad {
+    width: 50px;
+    height: 50px;
+    background: #FFF1F2;
+    /* Soft pink */
+    border-radius: 50%;
+    /* Circle for semi-formal friendlier look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    color: #E11D48;
+    /* Rose red */
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.reality-card:hover .icon-bad {
+    transform: rotate(15deg);
+    /* Playful interaction */
+}
+
+.problem-block h3 {
+    font-size: 1.2rem;
+    color: var(--text-heading);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.problem-block p {
+    font-size: 0.95rem;
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+.approach-block {
+    background: var(--brand-primary);
+    /* Full solid color background for solution part */
+    padding: 2rem;
+    color: white;
+    position: relative;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    /* Slight angle separation */
+    margin-top: -1.5rem;
+    /* Pull up to overlap */
+    padding-top: 3rem;
+    /* Compensate for clip-path */
+}
+
+.reality-card:hover .approach-block {
+    filter: brightness(1.05);
+}
+
+.approach-label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--brand-primary);
+    margin-bottom: 0.5rem;
+    background: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.approach-block p {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin: 0.5rem 0 0;
+}
+
+.section-footer-text {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: var(--primary-dark);
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 992px) {
+    .reality-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

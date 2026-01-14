@@ -1920,3 +1920,170 @@ body {
         font-size: 1.5rem;
     }
 }
+
+/* Reality vs Approach Section */
+.reality-vs-approach-section {
+    padding: 6rem 0;
+    background-color: #f8fafc;
+}
+
+.reality-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+
+.reality-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid #f1f5f9;
+    position: relative;
+}
+
+.reality-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: #bfdbfe;
+}
+
+.problem-block {
+    padding: 2rem;
+    flex-grow: 1;
+    background: #ffffff;
+    border-bottom: 1px dashed #e2e8f0;
+    /* Dashed line separator */
+    position: relative;
+}
+
+/* Connector Visual (Small dot on the line) */
+.problem-block::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 2rem;
+    width: 9px;
+    height: 9px;
+    background: #e2e8f0;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.reality-card:hover .problem-block::after {
+    background: var(--brand-primary);
+}
+
+.icon-bad {
+    width: 48px;
+    height: 48px;
+    background: #F3F4F6;
+    /* Neutral Gray base */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    color: #9CA3AF;
+    /* Muted icon */
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* On hover, show the red 'warning' nature slightly but keep it professional */
+.reality-card:hover .icon-bad {
+    background: #FEF2F2;
+    color: #EF4444;
+}
+
+.problem-block h3 {
+    font-size: 1.1rem;
+    color: #4B5563;
+    /* Gray heading */
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.reality-card:hover .problem-block h3 {
+    color: #1F2937;
+    /* Darker on hover */
+}
+
+.problem-block p {
+    font-size: 0.9rem;
+    color: #9CA3AF;
+    /* Muted text */
+    line-height: 1.5;
+}
+
+.approach-block {
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+    padding: 2rem 2rem 2.5rem;
+    position: relative;
+    border-left: 4px solid transparent;
+    border-left-color: var(--brand-primary);
+    /* Always active highlight */
+    transition: all 0.3s ease;
+}
+
+.reality-card:hover .approach-block {
+    background: #eff6ff;
+    /* Light blue tint on hover */
+}
+
+.approach-label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--brand-primary);
+    margin-bottom: 0.75rem;
+    background: #DBEAFE;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.approach-block p {
+    color: var(--text-heading);
+    /* Strong dark text */
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.section-footer-text {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: var(--primary-color);
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .reality-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

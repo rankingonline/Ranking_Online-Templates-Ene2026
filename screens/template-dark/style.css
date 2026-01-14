@@ -1827,3 +1827,128 @@ body.dark-theme {
         grid-template-columns: 1fr;
     }
 }
+
+/* Reality vs Approach Section */
+.reality-vs-approach-section {
+    padding: 6rem 0;
+    background-color: var(--dark-base);
+    position: relative;
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.reality-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+.reality-card {
+    background: var(--dark-surface);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.reality-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.problem-block {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+/* Removed icon-bad styles */
+
+.problem-block h3 {
+    font-size: 1.25rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.problem-block p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    /* More muted */
+    line-height: 1.6;
+}
+
+.approach-block {
+    background: rgba(255, 255, 255, 0.03);
+    /* Very subtle base */
+    padding: 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Neon Glow Effect on Hover for Solution */
+.reality-card:hover .approach-block {
+    background: rgba(36, 5, 229, 0.15);
+    /* Accent tint */
+    border-top-color: var(--accent);
+    box-shadow: inset 0 0 20px rgba(36, 5, 229, 0.2);
+}
+
+.approach-label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--dark-bg);
+    /* Dark text on pill */
+    margin-bottom: 0.75rem;
+    background: var(--accent);
+    /* Neon pill */
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(224, 108, 31, 0.4);
+    /* Glow from accent color */
+}
+
+.approach-block p {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin: 0.5rem 0 0;
+}
+
+.section-footer-text {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 992px) {
+    .reality-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
